@@ -20,3 +20,5 @@ jobs:
         run: npm run generate
       # - name: Unit test
       #   run: npm run test
+      - name: EsLint
+        run: npm run lintfix
