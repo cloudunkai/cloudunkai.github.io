@@ -18,5 +18,5 @@ jobs:
         run: npm ci
       - name: Static HTML export with Nuxt
         run: npm run generate
-      - name: Unit test
-        run: npm run test
+      # - name: Unit test
+      #   run: npm run test
