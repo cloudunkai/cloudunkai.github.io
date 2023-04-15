@@ -15,15 +15,16 @@ export default defineNuxtConfig({
           href: '/favicon.ico'
         }
       ]
-    }
+    },
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
   build: {
     transpile: ['vuetify']
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '@/assets/css/style.css',
     '@/assets/main.scss',
+    '@/assets/css/style.css',
     'mdi/css/materialdesignicons.min.css'
   ],
   components: true,
