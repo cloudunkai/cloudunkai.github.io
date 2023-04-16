@@ -40,6 +40,7 @@
 
     <v-main>
       <NuxtPage />
+      <h3 class="ma-5" style="white-space: break-spaces">{{ data }}</h3>
     </v-main>
 
     <v-navigation-drawer location="right">
@@ -51,17 +52,31 @@
 
     <v-footer app height="72">
       <v-text-field
+        v-model="message"
         bg-color="grey-lighten-1"
         class="rounded-pill overflow-hidden"
         density="compact"
         hide-details
         variant="solo"
       ></v-text-field>
+      <v-btn color="" @click="sendMessage"> Sent </v-btn>
     </v-footer>
   </v-app>
 </template>
 
 <script setup lang="ts">
+const loadingStore = useLoadingStore()
+const { chatCompletion } = useChatgpt()
 const drawer = ref(false)
 const links = ref(['Dashboard', 'Messages', 'Profile', 'Updates'])
+
+const data = ref('')
+const message = ref('')
+
+async function sendMessage() {
+  loadingStore.setLoading(true)
+  const response = await chatCompletion(message.value)
+  data.value = response
+  loadingStore.setLoading(false)
+}
 </script>

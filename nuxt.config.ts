@@ -1,5 +1,7 @@
+import dotenv from 'dotenv'
+dotenv.config()
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   typescript: {
     strict: true
   },
@@ -20,7 +22,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   build: {
-    transpile: ['vuetify']
+    transpile: ['vuetify', '@nuxtjs/dotenv']
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
@@ -29,10 +31,13 @@ export default defineNuxtConfig({
     'mdi/css/materialdesignicons.min.css'
   ],
   components: true,
-  modules: [],
+  modules: ['nuxt-chatgpt'],
+  chatgpt: {
+    apiKey: process.env.NUXT_API_KEY
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   // runtime config
-  runtimeConfig: { apiKey: process.env.API_KEY || '' },
+  runtimeConfig: { apiKey: process.env.NUXT_API_KEY },
   vite: {
     define: {
       'process.env.DEBUG': false

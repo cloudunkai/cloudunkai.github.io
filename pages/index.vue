@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Loading />
     <Food />
   </div>
 </template>
