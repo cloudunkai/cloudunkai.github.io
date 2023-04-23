@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 dotenv.config()
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   typescript: {
     strict: true
   },

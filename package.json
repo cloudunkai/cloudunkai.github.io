@@ -7,14 +7,15 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint:ts": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
-    "lint": "yarn lint:js && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+    "lint": "yarn lint:ts && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:ts --fix",
     "test": "vitest --run",
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.1.1",
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/eslint-module": "^4.0.2",
@@ -36,6 +37,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "mdi": "^2.2.43"
+    "mdi": "^2.2.43",
+    "moment": "^2.29.4"
   }
 }

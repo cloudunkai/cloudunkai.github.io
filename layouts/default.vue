@@ -43,13 +43,14 @@
       <h3 class="ma-5" style="white-space: break-spaces">{{ data }}</h3>
     </v-main>
 
-    <v-navigation-drawer location="right">
+    <!-- <v-navigation-drawer location="right">
       <v-list>
         <v-list-item v-for="n in 5" :key="n" :title="`Item ${n}`" link>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
-
+    </v-navigation-drawer> -->
+    <BackToTop />
+    <Snackbar />
     <v-footer app height="72">
       <v-text-field
         v-model="message"
@@ -65,6 +66,9 @@
 </template>
 
 <script setup lang="ts">
+import BackToTop from '@/components/common/BackToTop.vue'
+import Snackbar from '@/components/common/Snackbar.vue'
+
 const loadingStore = useLoadingStore()
 const { chatCompletion } = useChatgpt()
 const drawer = ref(false)
