@@ -7,18 +7,20 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint:ts": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
-    "lint": "yarn lint:js && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+    "lint": "yarn lint:ts && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:ts --fix",
     "test": "vitest --run",
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {
+    "@invictus.codes/nuxt-vuetify": "^0.2.20",
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/eslint-module": "^4.0.2",
     "@nuxtjs/i18n": "^8.0.0-beta.11",
+    "@nuxtjs/tailwindcss": "^6.6.7",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vitest/coverage-c8": "^0.29.8",
     "@vue/test-utils": "^2.3.2",
@@ -28,12 +30,16 @@
     "eslint-plugin-vitest": "^0.0.57",
     "jsdom": "^21.1.1",
     "nuxt": "^3.4.0",
+    "nuxt-chatgpt": "^0.1.10",
+    "nuxt-icon": "^0.4.0",
     "nuxt-lodash": "^2.4.1",
     "prettier": "^2.8.7",
-    "sass": "^1.62.0",
-    "vuetify": "^3.1.4"
+    "sass": "^1.62.0"
   },
   "dependencies": {
-    "mdi": "^2.2.43"
+    "@mdi/font": "^7.2.96",
+    "dotenv": "^16.0.3",
+    "mdi": "^2.2.43",
+    "moment": "^2.29.4"
   }
 }

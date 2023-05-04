@@ -1,5 +1,8 @@
 <template>
-  <div class="container">12312312</div>
+  <div class="container">
+    <Loading />
+    <Food />
+  </div>
 </template>
 
 <style scoped>
