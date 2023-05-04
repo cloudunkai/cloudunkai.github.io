@@ -91,6 +91,3 @@ sw.*
 
 # vscode config
 .vscode/
-
-# github 
-.github
