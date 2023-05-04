@@ -1,11 +1,10 @@
 <template>
   <div class="back-to-top" :class="{ visible: isVisible }" @click="scrollToTop">
-    <Icon class="text-white" width="30" icon="ph:rocket-light" />
+    <Icon class="text-white" size="30" name="ph:rocket-light" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 const isVisible = ref(false)
 
 const handleScroll = () => {
