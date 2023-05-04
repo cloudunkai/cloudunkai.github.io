@@ -36,7 +36,7 @@ const Darktheme: ThemeDefinition = {
   }
 }
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   typescript: {
     strict: true
   },
