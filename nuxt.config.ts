@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'nuxt3-vuetify3-sample',
-      htmlAttrs: { lang: 'en' },
+      htmlAttrs: { lang: 'ja' },
       meta: [{ charset: 'utf-8' }],
       link: [
         {
