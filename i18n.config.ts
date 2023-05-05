@@ -1,3 +1,4 @@
+// BETA 8.0.0 SSR: true
 import locales from '@/configs/locales'
 const messages: any = locales.messages
 
