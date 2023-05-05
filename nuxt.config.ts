@@ -61,8 +61,7 @@ export default defineNuxtConfig({
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '@/assets/main.scss',
-    '@/assets/css/style.css',
+    '@/styles/main.scss',
     '@mdi/font/css/materialdesignicons.css',
     'vue3-lottie/dist/style.css'
   ],

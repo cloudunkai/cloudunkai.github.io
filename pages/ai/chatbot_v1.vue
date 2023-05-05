@@ -193,14 +193,14 @@ watch(
 .user-message {
   display: flex;
   align-content: center;
-  justify-content: end;
+  // justify-content: end;
   flex-direction: row-reverse;
 }
 
 .assistant-message {
   display: flex;
   align-content: center;
-  justify-content: start;
+  // justify-content: start;
   flex-direction: row;
 }
 

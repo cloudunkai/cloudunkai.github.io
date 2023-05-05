@@ -43,6 +43,7 @@
     "mdi": "^2.2.43",
     "moment": "^2.29.4",
     "openai": "^3.2.1",
-    "vue3-lottie": "^2.7.0"
+    "vue3-lottie": "^2.7.0",
+    "vue3-perfect-scrollbar": "^1.6.1"
   }
 }
