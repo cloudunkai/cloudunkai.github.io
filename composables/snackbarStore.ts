@@ -1,5 +1,3 @@
-import { Ref } from 'nuxt/dist/app/compat/capi'
-
 // snackbarType 状態管理
 type snackbarState = {
   isShow: boolean

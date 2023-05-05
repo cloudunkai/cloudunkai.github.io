@@ -1,5 +1,3 @@
-import { Ref } from 'nuxt/dist/app/compat/capi'
-
 interface Color {
   colorId: number
   colorName: string

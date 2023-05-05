@@ -1,12 +1,7 @@
 <template>
-  <div class="container">
+  <div>
     <Loading />
-    <Food />
   </div>
 </template>
 
-<style scoped>
-.container {
-  padding: 32px;
-}
-</style>
+<style scoped></style>

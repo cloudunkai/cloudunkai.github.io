@@ -3,6 +3,7 @@
     <UiNavigation />
     <UiAppbar />
     <v-main class="main-container">
+      <Toolbox />
       <div class="flex-fill">
         <NuxtPage />
       </div>
