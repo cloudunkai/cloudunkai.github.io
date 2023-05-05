@@ -1,5 +1,3 @@
-import { Ref } from 'nuxt/dist/app/compat/capi'
-
 type chatState = {
   apiKey: String
   chatHistory: []
@@ -14,16 +12,19 @@ export const useChatStore = () => {
   }))
   return {
     state,
+    saveApiKey: saveApiKey(state),
     getApiKey: getApiKey(state)
   }
 }
 
-const getApiKey = (state: Ref<chatState>) => {
-  return () => {
-    if (process.env.NUXT_API_KEY) {
-      return process.env.NUXT_API_KEY
-    } else {
-      return state.value.apiKey
-    }
+const saveApiKey = (state: Ref<chatState>) => {
+  return (inputKey: String) => {
+    state.value.apiKey = inputKey
   }
+}
+
+const config = useRuntimeConfig()
+// TODO: ここでAPIキーを取得する process.env.NUXT_API_KEY は使えない
+const getApiKey = (state: Ref<chatState>) => () => {
+  return state.value.apiKey || config.public.apiKey
 }

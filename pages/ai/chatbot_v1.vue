@@ -49,7 +49,6 @@
     <div class="input-area">
       <v-sheet elevation="0" class="input-panel">
         <v-text-field
-          ref="input"
           v-model="userMessage"
           color="primary"
           type="text"
@@ -62,17 +61,15 @@
           <template #prepend-inner>
             <v-icon>mdi-microphone</v-icon>
           </template>
+          <!-- // TODO: Add loading animation -->
           <template #append-inner>
             <v-fade-transition leave-absolute>
-              <Icon
-                v-if="isLoading"
+              <!-- <Icon
                 class="text-primary"
                 size="30"
                 name="eos-icons:three-dots-loading"
-              />
-              <v-icon v-else color="primary" @click="sendMessage"
-                >mdi-send</v-icon
-              >
+              /> -->
+              <v-icon color="primary" @click="sendMessage">mdi-send</v-icon>
             </v-fade-transition>
           </template>
         </v-text-field>
@@ -95,7 +92,7 @@ interface Message {
 const messages = ref<Message[]>([])
 
 // User Input Message
-const userMessage = ref('')
+const userMessage: any = ref('')
 
 const isLoading = ref(false)
 
@@ -119,11 +116,11 @@ const sendMessage = async () => {
 
 const createCompletion = async () => {
   // Check if the API key is set
-  // if (!chatStore.state.value.apiKey) {
-  //   snackbarStore.showErrorMessage('请先输入API KEY')
-  //   isLoading.value = false
-  //   return
-  // }
+  if (!chatStore.getApiKey()) {
+    snackbarStore.showErrorMessage('请先输入API KEY')
+    isLoading.value = false
+    return
+  }
 
   try {
     const completion = await $fetch('/api/aiApi', {
