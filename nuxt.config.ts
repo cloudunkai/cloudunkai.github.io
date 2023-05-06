@@ -56,15 +56,8 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
-  imports: {
-    dirs: [
-      // Scan top-level modules
-      'composables',
-      'server'
-    ]
-  },
   build: {
-    transpile: ['@nuxtjs/dotenv']
+    transpile: ['@nuxtjs/dotenv', 'markdown-it']
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
@@ -77,8 +70,7 @@ export default defineNuxtConfig({
     '@invictus.codes/nuxt-vuetify',
     'nuxt-icon',
     '@nuxtjs/i18n',
-    'nuxt-chatgpt',
-    'markdown-it'
+    'nuxt-chatgpt'
   ],
   vuetify: {
     vuetifyOptions: {
@@ -105,5 +97,23 @@ export default defineNuxtConfig({
     define: {
       'process.env.DEBUG': false
     }
+  },
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        file: 'en.ts'
+      },
+      {
+        code: 'ja',
+        file: 'ja.ts'
+      },
+      {
+        code: 'zhHans',
+        file: 'zhHans.ts'
+      }
+    ],
+    langDir: 'locales/',
+    defaultLocale: 'ja'
   }
 })

@@ -120,7 +120,7 @@ export default {
     },
     chatbot_v1: 'Chatbot v1',
     chatbot_v2: 'Chatbot v2(Stream)',
-    voiceBot: '实时语音对话'
+    voicebot: '实时语音对话'
   },
   dashboard: {
     activity: '活动',
