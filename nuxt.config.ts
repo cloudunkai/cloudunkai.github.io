@@ -59,7 +59,8 @@ export default defineNuxtConfig({
   imports: {
     dirs: [
       // Scan top-level modules
-      'composables'
+      'composables',
+      'server'
     ]
   },
   build: {
