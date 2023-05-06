@@ -78,9 +78,9 @@ const navigation = ref(configs.navigation)
 const customizeTheme = useCustomizeThemeStore()
 const { state } = customizeTheme
 
-const openGithubSite = () => {
-  window.open('', '_blank')
-}
+// const openGithubSite = () => {
+//   window.open('', '_blank')
+// }
 
 onMounted(() => {
   scrollToBottom()

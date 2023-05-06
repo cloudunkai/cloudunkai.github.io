@@ -56,6 +56,7 @@
           variant="solo"
           placeholder="SendMessage"
           hide-details
+          :disabled="isLoading"
           @keyup.enter="sendMessage"
         >
           <template #prepend-inner>
@@ -63,14 +64,17 @@
           </template>
           <!-- // TODO: Add loading animation -->
           <template #append-inner>
-            <v-fade-transition leave-absolute>
-              <!-- <Icon
-                class="text-primary"
-                size="30"
-                name="eos-icons:three-dots-loading"
-              /> -->
-              <v-icon color="primary" @click="sendMessage">mdi-send</v-icon>
-            </v-fade-transition>
+            <!-- <v-fade-transition leave-absolute> -->
+            <Icon
+              v-if="isLoading"
+              class="text-primary"
+              size="30"
+              name="eos-icons:three-dots-loading"
+            />
+            <v-icon v-else color="primary" @click="sendMessage"
+              >mdi-send</v-icon
+            >
+            <!-- </v-fade-transition> -->
           </template>
         </v-text-field>
       </v-sheet>
@@ -80,6 +84,7 @@
 
 <script setup lang="ts">
 import MdEditor from 'md-editor-v3'
+
 import 'md-editor-v3/lib/style.css'
 const snackbarStore = useSnackbarStore()
 const chatStore = useChatStore()
@@ -127,7 +132,8 @@ const createCompletion = async () => {
       method: 'post',
       body: {
         messages: messages.value,
-        model: 'gpt-3.5-turbo'
+        model: 'gpt-3.5-turbo',
+        apiKey: chatStore.getApiKey()
       }
     })
     // Add the bot message
@@ -135,6 +141,7 @@ const createCompletion = async () => {
       content: completion.choices[0].message.content,
       role: 'assistant'
     })
+    isLoading.value = false
   } catch (error: any) {
     isLoading.value = false
     snackbarStore.showErrorMessage(error.message)
