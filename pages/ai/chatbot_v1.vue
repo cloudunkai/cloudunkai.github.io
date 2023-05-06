@@ -84,10 +84,11 @@
 
 <script setup lang="ts">
 import MdEditor from 'md-editor-v3'
-
 import 'md-editor-v3/lib/style.css'
+
 const snackbarStore = useSnackbarStore()
 const chatStore = useChatStore()
+
 interface Message {
   content: string
   role: 'user' | 'assistant'
@@ -144,7 +145,7 @@ const createCompletion = async () => {
     isLoading.value = false
   } catch (error: any) {
     isLoading.value = false
-    snackbarStore.showErrorMessage(error.message)
+    snackbarStore.showErrorMessage(error.statusMessage)
   }
 }
 

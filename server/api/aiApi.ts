@@ -16,6 +16,9 @@ export default defineEventHandler(async (event) => {
     )
     return response
   } catch (error: any) {
-    return error
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'API Key is invalid.'
+    })
   }
 })
