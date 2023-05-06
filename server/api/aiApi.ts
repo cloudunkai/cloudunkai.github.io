@@ -8,14 +8,17 @@ export default defineEventHandler(async (event) => {
         headers: {
           Authorization: 'Bearer ' + param.apiKey
         },
-        body: JSON.stringify({
+        body: {
           messages: param.messages,
           model: param.model
-        })
+        }
       }
     )
     return response
   } catch (error: any) {
-    throw createError(error)
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'API Key is invalid.'
+    })
   }
 })
