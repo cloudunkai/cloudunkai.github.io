@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: npm i
       - name: Static HTML export with Nuxt
-        run: NUXT_APP_CDN_URL=https://cloudunkai.github.io/ npm run generate
+        run: NUXT_APP_CDN_URL=https://cloudunkai.github.io/ npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
