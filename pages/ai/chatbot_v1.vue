@@ -129,7 +129,9 @@ const createCompletion = async () => {
   }
 
   try {
+    const baseURL = 'https://cloudunkai.github.io/'
     const completion = await $fetch('/api/aiApi', {
+      baseURL,
       method: 'post',
       body: {
         messages: messages.value,
