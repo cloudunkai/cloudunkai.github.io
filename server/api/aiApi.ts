@@ -6,11 +6,16 @@ export default defineEventHandler(async (event) => {
       {
         method: 'POST',
         headers: {
-          Authorization: 'Bearer ' + process.env.NUXT_API_KEY
+          Authorization: 'Bearer ' + param.apiKey
         },
-        body: param
+        body: JSON.stringify({
+          messages: param.messages,
+          model: param.model
+        })
       }
     )
     return response
-  } catch (error) {}
+  } catch (error: any) {
+    return error
+  }
 })
