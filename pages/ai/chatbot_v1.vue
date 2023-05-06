@@ -168,7 +168,7 @@ const createCompletion = async () => {
     isLoading.value = false
   } catch (error: any) {
     isLoading.value = false
-    snackbarStore.showErrorMessage(error.statusMessage)
+    snackbarStore.showErrorMessage('API KEY が正しくありません。')
   }
 }
 

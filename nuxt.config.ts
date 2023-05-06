@@ -57,7 +57,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   build: {
-    transpile: ['@nuxtjs/dotenv', 'markdown-it']
+    transpile: ['@nuxtjs/dotenv']
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
@@ -70,7 +70,8 @@ export default defineNuxtConfig({
     '@invictus.codes/nuxt-vuetify',
     'nuxt-icon',
     '@nuxtjs/i18n',
-    'nuxt-chatgpt'
+    'nuxt-chatgpt',
+    'markdown-it'
   ],
   vuetify: {
     vuetifyOptions: {
