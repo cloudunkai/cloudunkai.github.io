@@ -123,22 +123,43 @@ const sendMessage = async () => {
 const createCompletion = async () => {
   // Check if the API key is set
   if (!chatStore.getApiKey()) {
-    snackbarStore.showErrorMessage('请先输入API KEY')
+    snackbarStore.showErrorMessage('API KEY を設定してください。')
     isLoading.value = false
     return
   }
 
   try {
-    const baseURL = 'https://cloudunkai.github.io/'
-    const completion = await $fetch('/api/aiApi', {
-      baseURL,
-      method: 'post',
-      body: {
-        messages: messages.value,
-        model: 'gpt-3.5-turbo',
-        apiKey: chatStore.getApiKey()
+    // TODO ：SeverAPIを呼び出す
+    // const completion = await $fetch('/api/aiApi', {
+    //   method: 'post',
+    //   body: {
+    //     messages: messages.value,
+    //     model: 'gpt-3.5-turbo',
+    //     apiKey: chatStore.getApiKey()
+    //   }
+    interface completionData {
+      choices: [
+        {
+          message: {
+            content: string
+          }
+        }
+      ]
+    }
+    const completion: completionData = await $fetch(
+      'https://api.openai.com/v1/chat/completions',
+      {
+        method: 'post',
+        headers: {
+          Authorization: 'Bearer ' + chatStore.getApiKey()
+        },
+        body: {
+          messages: messages.value,
+          model: 'gpt-3.5-turbo'
+        }
       }
-    })
+    )
+
     // Add the bot message
     messages.value.push({
       content: completion.choices[0].message.content,
