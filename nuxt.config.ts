@@ -69,7 +69,8 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/i18n',
     'nuxt-chatgpt',
-    'markdown-it'
+    'markdown-it',
+    'rollup-plugin-node-polyfills'
   ],
   vuetify: {
     vuetifyOptions: {
@@ -82,22 +83,19 @@ export default defineNuxtConfig({
     }
   },
   chatgpt: {
-    apiKey: process.env.NUXT_API_KEY
+    apiKey: ''
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   // runtime config
   runtimeConfig: {
-    apiKey: process.env.NUXT_API_KEY,
+    apiKey: '',
     public: {
-      apiKey: process.env.NUXT_API_KEY
+      apiKey: ''
     }
   },
   vite: {
     define: {
       'process.env.DEBUG': false
-    },
-    optimizeDeps: {
-      include: ['markdown-it']
     }
   },
   i18n: {
