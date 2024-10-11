@@ -26,7 +26,7 @@
     "@vitest/coverage-c8": "^0.29.8",
     "@vue/test-utils": "^2.3.2",
     "eslint": "^8.38.0",
-    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vitest": "^0.0.57",
     "jsdom": "^21.1.1",
@@ -40,11 +40,13 @@
   "dependencies": {
     "@mdi/font": "^7.2.96",
     "dotenv": "^16.0.3",
+    "gsap": "^3.12.5",
     "markdown-it": "^13.0.1",
     "md-editor-v3": "^3.0.0",
     "mdi": "^2.2.43",
     "moment": "^2.29.4",
     "openai": "^3.2.1",
+    "three": "^0.169.0",
     "vue3-lottie": "^2.7.0",
     "vue3-perfect-scrollbar": "^1.6.1"
   }
