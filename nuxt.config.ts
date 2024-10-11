@@ -1,6 +1,4 @@
-import dotenv from 'dotenv'
 import type { ThemeDefinition } from 'vuetify'
-dotenv.config()
 
 const Lighttheme: ThemeDefinition = {
   dark: false,
@@ -71,7 +69,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/i18n',
     'nuxt-chatgpt',
-    'markdown-it'
+    'rollup-plugin-node-polyfills'
   ],
   vuetify: {
     vuetifyOptions: {
