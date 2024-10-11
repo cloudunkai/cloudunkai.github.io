@@ -1,27 +1,26 @@
 name: CI
 
-on: pull_request
+on: push
 
 jobs:
-  ci:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Delete node_modules and package-lock.json
+        run: rm -rf node_modules package-lock.json
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18.16'
           cache: 'npm'
-          cache-dependency-path: './package-lock.json'  # 如果 package-lock.json 在项目根目录
+          cache-dependency-path: './package-lock.json'
       
-      - name: Install dependencies with npm ci
-        run: npm ci
+      - name: Install dependencies
+        run: npm install
 
       - name: Static HTML export with Nuxt
         run: npm run generate
-
-      # Uncomment the following lines if you have unit tests to run
-      # - name: Run unit tests
-      #   run: npm run test
