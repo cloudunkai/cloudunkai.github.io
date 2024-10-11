@@ -10,11 +10,12 @@ module.exports = {
   },
   extends: [
     '@nuxtjs/eslint-config-typescript', // Nuxt.js向けのTypeScript設定を適用します
-    'plugin:prettier/recommended' // PrettierとESLintの連携設定を適用します
+    'plugin:prettier/recommended', // PrettierとESLintの連携設定を適用します
+    'prettier' // PrettierとESLintの競合するルールを無効化します
   ],
   plugins: ['vitest', '@typescript-eslint', 'prettier'], // 追加のプラグインはここに記述します
   rules: {
-    'vue/multi-word-component-names': 0, // 複数単語のコンポーネント名のルールを無効化します
-    'prettier/prettier': 'error' // Prettierのルールを有効化しますß
+    'vue/multi-word-component-names': 'off', // 複数単語のコンポーネント名のルールを無効化します
+    'prettier/prettier': 'off' // Prettierのルールを有効化します
   }
 }

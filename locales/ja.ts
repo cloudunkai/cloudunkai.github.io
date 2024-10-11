@@ -118,9 +118,9 @@ export default {
       dynamicFormRender: 'Dynamic Form Render',
       customFormGeneration: 'Custom Form Generation'
     },
-    chatbot_v1: 'ChatBot v1',
-    chatbot_v2: 'ChatBot v2(Stream)',
-    voicebot: 'VoiceBot'
+    chatbot_v1: 'ChatBot v1'
+    // chatbot_v2: 'ChatBot v2(Stream)',
+    // voicebot: 'VoiceBot'
   },
   dashboard: {
     activity: 'アクティビティ',

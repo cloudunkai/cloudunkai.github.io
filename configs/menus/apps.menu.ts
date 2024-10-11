@@ -12,12 +12,12 @@ export default [
     text: 'Chat',
     link: '/apps/chat'
   },
-  {
-    icon: 'mdi-format-list-checkbox',
-    key: 'menu.todo',
-    text: 'Todo',
-    link: '/apps/todo'
-  },
+  // {
+  //   icon: 'mdi-format-list-checkbox',
+  //   key: 'menu.todo',
+  //   text: 'Todo',
+  //   link: '/apps/todo'
+  // },
   // {
   //   icon: "mdi-bookmark-plus",
   //   key: "menu.nitori",
@@ -36,16 +36,16 @@ export default [
   //   text: "Ikea",
   //   link: "/apps/ikea",
   // },
-  {
-    icon: 'mdi-bookmark-plus',
-    key: 'menu.unsplash',
-    text: 'Unsplash',
-    link: '/apps/unsplash'
-  },
-  {
-    icon: 'mdi-email-outline',
-    key: 'menu.email',
-    text: 'Email',
-    link: '/apps/email'
-  }
+  // {
+  //   icon: 'mdi-bookmark-plus',
+  //   key: 'menu.unsplash',
+  //   text: 'Unsplash',
+  //   link: '/apps/unsplash'
+  // },
+  // {
+  //   icon: 'mdi-email-outline',
+  //   key: 'menu.email',
+  //   text: 'Email',
+  //   link: '/apps/email'
+  // }
 ]
