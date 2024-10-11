@@ -42,7 +42,7 @@
     "@mdi/font": "^7.2.96",
     "dotenv": "^16.0.3",
     "gsap": "^3.12.5",
-    "markdown-it": "^13.0.1",
+    "markdown-it": "^14.1.0",
     "md-editor-v3": "^3.0.0",
     "mdi": "^2.2.43",
     "moment": "^2.29.4",
