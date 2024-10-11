@@ -69,7 +69,6 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/i18n',
     'nuxt-chatgpt',
-    'rollup-plugin-node-polyfills'
   ],
   vuetify: {
     vuetifyOptions: {
