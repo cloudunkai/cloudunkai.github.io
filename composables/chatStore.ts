@@ -23,8 +23,7 @@ const saveApiKey = (state: Ref<chatState>) => {
   }
 }
 
-const config = useRuntimeConfig()
-// TODO: ここでAPIキーを取得する process.env.NUXT_API_KEY は使えない
 const getApiKey = (state: Ref<chatState>) => () => {
+  const config = useRuntimeConfig()
   return state.value.apiKey || config.public.apiKey
 }
