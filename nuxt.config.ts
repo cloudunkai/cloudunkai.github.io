@@ -71,7 +71,6 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/i18n',
     'nuxt-chatgpt',
-    'markdown-it'
   ],
   vuetify: {
     vuetifyOptions: {
