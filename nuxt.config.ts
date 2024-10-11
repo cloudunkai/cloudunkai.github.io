@@ -1,6 +1,4 @@
-import dotenv from 'dotenv'
 import type { ThemeDefinition } from 'vuetify'
-dotenv.config()
 
 const Lighttheme: ThemeDefinition = {
   dark: false,
@@ -97,6 +95,9 @@ export default defineNuxtConfig({
   vite: {
     define: {
       'process.env.DEBUG': false
+    },
+    optimizeDeps: {
+      include: ['markdown-it']
     }
   },
   i18n: {
