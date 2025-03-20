@@ -121,7 +121,7 @@ export default {
       customFormGeneration: 'Custom Form Generation'
     },
     chatbot_v1: 'ChatBot v1',
-    chatbot_v2: 'ChatBot v2(Stream)',
+    resume_ai: 'Resume AI',
     voicebot: 'VoiceBot'
   },
 

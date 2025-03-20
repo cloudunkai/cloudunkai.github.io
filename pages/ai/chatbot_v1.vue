@@ -155,7 +155,7 @@ const createCompletion = async () => {
         },
         body: {
           messages: messages.value,
-          model: 'gpt-3.5-turbo'
+          model: 'gpt-4o-mini'
         }
       }
     )

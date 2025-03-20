@@ -8,26 +8,26 @@ import menuAi from './menus/ai.menu'
 
 export default {
   menu: [
+    // {
+    //   text: '',
+    //   key: '',
+    //   items: [
+    //     {
+    //       key: 'menu.dashboard',
+    //       text: 'Dashboard',
+    //       link: '/dashboard',
+    //       icon: 'mdi-view-dashboard-outline'
+    //     }
+    //   ]
+    // },
     {
-      text: '',
-      key: '',
-      items: [
-        {
-          key: 'menu.dashboard',
-          text: 'Dashboard',
-          link: '/dashboard',
-          icon: 'mdi-view-dashboard-outline'
-        }
-      ]
-    },
-    {
-      text: 'chatgpt',
+      text: 'AI',
       items: menuAi
     },
-    {
-      text: 'Apps',
-      items: menuApps
-    },
+    // {
+    //   text: 'Apps',
+    //   items: menuApps
+    // },
     // {
     //   text: 'Data',
     //   items: menuData

@@ -118,8 +118,8 @@ export default {
       dynamicFormRender: 'Dynamic Form Render',
       customFormGeneration: 'Custom Form Generation'
     },
-    chatbot_v1: 'ChatBot v1'
-    // chatbot_v2: 'ChatBot v2(Stream)',
+    chatbot_v1: 'ChatBot v1',
+    resume_ai: 'Resume AI',
     // voicebot: 'VoiceBot'
   },
   dashboard: {

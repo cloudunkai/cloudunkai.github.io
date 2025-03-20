@@ -119,7 +119,7 @@ export default {
       customFormGeneration: '自定义表单生成'
     },
     chatbot_v1: 'Chatbot v1',
-    chatbot_v2: 'Chatbot v2(Stream)',
+    resume_ai: '简历解析生成',
     voicebot: '实时语音对话'
   },
   dashboard: {

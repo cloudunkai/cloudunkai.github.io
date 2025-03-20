@@ -1,17 +1,16 @@
 export default [
-  {
-    icon: 'mdi-bulletin-board',
-    key: 'menu.board',
-    text: 'Board',
-    link: '/apps/board'
-  },
-
+  // {
+  //   icon: 'mdi-bulletin-board',
+  //   key: 'menu.board',
+  //   text: 'Board',
+  //   link: '/apps/board'
+  // },
   {
     icon: 'mdi-forum-outline',
     key: 'menu.chat',
     text: 'Chat',
     link: '/apps/chat'
-  },
+  }
   // {
   //   icon: 'mdi-format-list-checkbox',
   //   key: 'menu.todo',

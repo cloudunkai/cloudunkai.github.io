@@ -13,7 +13,11 @@
   </v-app>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+  middleware: 'redirect'
+})
+</script>
 <style scoped>
 .scrollnav {
   height: calc(100vh - 326px);
