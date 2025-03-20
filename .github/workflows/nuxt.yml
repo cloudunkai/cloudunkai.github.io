@@ -38,6 +38,12 @@ jobs:
           NUXT_APP_CDN_URL: https://cloudunkai.github.io/
         run: npm run generate
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2  
+        with:
+           name: dist
+           path: ./dist
+
   deploy:
     permissions:
       pages: write
