@@ -60,4 +60,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 自动生成的 token
           artifact_name: github-pages
-          preview: false
+          publish_dir: .output/public
