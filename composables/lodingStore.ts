@@ -1,4 +1,4 @@
-import { Ref } from 'nuxt/dist/app/compat/capi'
+// import { Ref } from 'nuxt/dist/app/compat/capi'
 
 // loading 状態管理
 type LoadingState = {
