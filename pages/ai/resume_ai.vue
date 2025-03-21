@@ -136,7 +136,7 @@ const download = async () => {
 
     const resumeContent = summary.value
 
-    const response = await fetch('/netlify/functions/getPdf', {
+    const response = await fetch('/api/getPdf', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -145,10 +145,7 @@ const download = async () => {
     })
 
     if (response.ok) {
-      // 获取返回的 PDF 数据作为 Blob
       const pdfBlob = await response.blob()
-
-      // 创建下载链接并触发下载npm
       const url = URL.createObjectURL(pdfBlob)
       const link = document.createElement('a')
       link.href = url
