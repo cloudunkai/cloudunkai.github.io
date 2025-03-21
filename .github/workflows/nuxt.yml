@@ -18,28 +18,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Node.js
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22.14.0'
           cache: 'npm'
-          cache-dependency-path: './package-lock.json'  # 如果 package-lock.json 在项目根目录
-
-      - name: Checkout
-        uses: actions/checkout@v3
+          cache-dependency-path: './package-lock.json'  # Ensure this path is correct
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci  # Use `npm ci` for a clean install based on the lock file
 
       - name: Static HTML export with Nuxt
         env:
-          NUXT_APP_CDN_URL: https://cloudunkai.github.io/
-        run: npm run generate
+          NUXT_APP_CDN_URL: https://cloudunkai.github.io/  # Ensure this environment variable is used in your Nuxt config
+        run: npm run generate  # Generates static files in the `dist` directory
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./dist  # Ensure this path matches the output directory of `npm run generate`
 
   deploy:
     permissions:
