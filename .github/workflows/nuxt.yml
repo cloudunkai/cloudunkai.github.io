@@ -29,7 +29,9 @@ jobs:
           cache-dependency-path: './package-lock.json'  # Ensure this path is correct
 
       - name: Install dependencies
-        run: npm i  
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
 
       - name: Static HTML export with Nuxt
         env:
