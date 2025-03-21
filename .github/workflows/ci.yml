@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22.14.0'
-          cache: 'false'
+          cache: 'npm'
           cache-dependency-path: './package-lock.json'
 
       - name: Clear npm cache
