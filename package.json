@@ -53,5 +53,8 @@
     "vue3-lottie": "^2.7.0",
     "vue3-perfect-scrollbar": "^1.6.1",
     "vuetify": "^3.7.18"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.6.1"
   }
 }
