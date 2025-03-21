@@ -21,9 +21,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.16.0'
+          node-version: '22.14.0'
           cache: 'npm'
-          cache-dependency-path: '/package-lock.json'
+          cache-dependency-path: './package-lock.json'  # 如果 package-lock.json 在项目根目录
 
       - name: Checkout
         uses: actions/checkout@v3

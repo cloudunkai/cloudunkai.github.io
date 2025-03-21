@@ -14,7 +14,6 @@ jobs:
         with:
           node-version: '22.14.0'
           cache: 'npm'
-          cache-dependency-path: './package-lock.json'  # 如果 package-lock.json 在项目根目录
       
       - name: Install dependencies with npm ci
         run: npm ci
