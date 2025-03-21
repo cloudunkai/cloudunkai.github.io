@@ -136,7 +136,7 @@ const download = async () => {
 
     const resumeContent = summary.value
 
-    const response = await fetch('/api/getPdf', {
+    const response = await fetch('.netlify/functions-serve/getPdf', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
