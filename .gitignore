@@ -92,3 +92,5 @@ sw.*
 
 # vscode config
 .vscode/
+# Local Netlify folder
+.netlify
