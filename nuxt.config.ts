@@ -58,7 +58,7 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ['@nuxtjs/dotenv']
+    transpile: ['@nuxtjs/dotenv','@nuxtjs/i18n']
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
