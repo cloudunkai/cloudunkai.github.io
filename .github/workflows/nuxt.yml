@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22.14.0'
-          cache: 'npm'
+          cache: 'false'
 
       - name: Delete node_modules and package-lock.json
         run: rm -rf node_modules package-lock.json
