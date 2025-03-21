@@ -24,14 +24,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.16.0'
+          node-version: '22.14.0'
           cache: 'npm'
           cache-dependency-path: './package-lock.json'  # Ensure this path is correct
 
       - name: Install dependencies
         run: |
           rm -rf node_modules package-lock.json
-          npm ci
+          npm install
 
       - name: Static HTML export with Nuxt
         env:
