@@ -1,6 +1,6 @@
-import enMessages from '../locales/en'
-import zhHansMessages from '../locales/zhHans'
-import jaMessages from '../locales/ja'
+import enMessages from '../i18n/locales/en'
+import zhHansMessages from '../i18n/locales/zhHans'
+import jaMessages from '../i18n/locales/ja'
 
 const supported = ['ja', 'en', 'zhHans']
 let locale = 'ja'
