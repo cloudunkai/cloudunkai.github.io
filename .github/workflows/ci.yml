@@ -13,16 +13,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22.14.0'
-          cache: 'false'
+          cache: 'npm'
           cache-dependency-path: './package-lock.json'
 
       - name: Clear npm cache
         run: npm cache clean --force 
 
+      - name: Update npm
+        run: npm install -g npm@latest
+
       - name: Remove node_modules and package-lock.json
-        run:  rm -rf node_modules
-              rm -f package-lock.json
-      
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+          
       - name: Install dependencies
         run: npm install
 

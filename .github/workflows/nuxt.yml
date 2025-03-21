@@ -27,9 +27,22 @@ jobs:
           node-version: '22.14.0'
           cache: 'npm'
 
-      - name: Delete node_modules and package-lock.json
-        run: rm -rf node_modules package-lock.json
+      - name: Update npm
+        run: npm install -g npm@latest
 
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Remove node_modules and package-lock.json
+        run: 
+         rm -rf $(find . -name "node_modules")
+         rm -f $(find . -name "package-lock.json")
+          
       - name: Install dependencies
         run: npm install
 
