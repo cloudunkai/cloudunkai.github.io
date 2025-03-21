@@ -29,7 +29,7 @@ jobs:
           cache-dependency-path: './package-lock.json'  # Ensure this path is correct
 
       - name: Install dependencies
-        run: npm ci  # Use `npm ci` for a clean install based on the lock file
+        run: npm i  
 
       - name: Static HTML export with Nuxt
         env:
