@@ -28,6 +28,10 @@ jobs:
           cache: 'npm'
           cache-dependency-path: './package-lock.json'  # Ensure this path is correct
 
+      - name: Install dependencies
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install 
 
       - name: Install vite@5.4.8
         run: npm install vite@5.4.8 
@@ -37,11 +41,6 @@ jobs:
 
       - name: Check Vite version
         run: npx vite --version  # 查看 Vite 版本
-
-      - name: Install dependencies
-        run: |
-          rm -rf node_modules package-lock.json
-          npm install 
 
       - name: Static HTML export with Nuxt
         env:
